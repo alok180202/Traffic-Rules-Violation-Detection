@@ -73,9 +73,9 @@ class MainWindow(QMainWindow):
         self.timer.timeout.connect(self.update_image)
         self.timer.start(50)
 
-        # trafficLightTimer = QTimer(self)
-        # trafficLightTimer.timeout.connect(self.toggleLight)
-        # trafficLightTimer.start(5000)
+        trafficLightTimer = QTimer(self)
+        trafficLightTimer.timeout.connect(self.toggleLight)
+        trafficLightTimer.start(5000)
 
     def toggleLight(self):
         self.processor.setLight('Green' if self.processor.getLight() == 'Red' else 'Red')
